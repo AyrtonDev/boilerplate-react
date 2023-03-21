@@ -6,5 +6,4 @@ export type TextFieldStyled = {
 };
 
 export type TextFieldProps = InputHTMLAttributes<HTMLInputElement> &
-  TextareaHTMLAttributes<HTMLTextAreaElement> &
   TextFieldStyled;
