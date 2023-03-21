@@ -1,0 +1,22 @@
+import styled from 'styled-components';
+
+export const Input = styled.input`
+  width: inherit;
+  height: 42px;
+  border: 1px solid ${({ theme }) => theme.colors.gray[200]};
+  padding: 20px 10px;
+`;
+
+export const DivInput = styled.div<{ flex?: string | number }>`
+  display: flex;
+  flex-direction: column;
+  flex: ${({ flex }) => flex};
+  width: 100%;
+  height: auto;
+`;
+
+export const Label = styled.label`
+  color: ${({ theme }) => theme.colors.black};
+  font-size: ${({ theme }) => theme.fontSize.heading3};
+  margin-bottom: 1rem;
+`;
