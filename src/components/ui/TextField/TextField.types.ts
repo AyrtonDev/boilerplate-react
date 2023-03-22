@@ -1,8 +1,8 @@
-import { InputHTMLAttributes, TextareaHTMLAttributes } from 'react';
+import { InputHTMLAttributes } from 'react';
 
 export type TextFieldStyled = {
   label?: string;
-  flex?: string | number;
+  flex?: string;
 };
 
 export type TextFieldProps = InputHTMLAttributes<HTMLInputElement> &
