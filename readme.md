@@ -1,8 +1,6 @@
-import { Meta } from '@storybook/addon-docs/blocks';
-
 <Meta title="👋 Introduction" />
 
-# Welcome to Boilerplate - with Vite + React + Typescript
+# Welcome to my Boilerplate
 
 ### Hello everyone, my name is Ayrton, in this my project I am using some modern tecnologies for frontend development like:
 
