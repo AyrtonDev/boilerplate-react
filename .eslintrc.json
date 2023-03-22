@@ -6,8 +6,7 @@
   "extends": [
     "eslint:recommended",
     "plugin:react/recommended",
-    "plugin:@typescript-eslint/recommended",
-    "airbnb-typescript"
+    "plugin:@typescript-eslint/recommended"
   ],
   "overrides": [],
   "parser": "@typescript-eslint/parser",
@@ -16,5 +15,7 @@
     "sourceType": "module"
   },
   "plugins": ["react", "@typescript-eslint"],
-  "rules": {}
+  "rules": {
+    "react/react-in-jsx-scope": "off"
+  }
 }

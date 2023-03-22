@@ -1,4 +1,4 @@
-import { render, screen } from '../../../utils/tests';
+import { render } from '../../../utils/tests';
 import { it } from 'vitest';
 import TextField from './TextField';
 
