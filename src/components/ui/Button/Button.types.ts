@@ -5,4 +5,4 @@ type ButtonStyledProps = {
 };
 
 export type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement> &
-  ButtonStyledProps & {};
+  ButtonStyledProps;
