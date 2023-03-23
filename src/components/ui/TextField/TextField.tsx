@@ -2,11 +2,12 @@ import { FC } from 'react';
 import * as Styled from './TextField.styled';
 import { TextFieldProps } from './TextField.types';
 
-const TextField: FC<TextFieldProps> = ({ flex, label, ...props }) => {
+const TextField: FC<TextFieldProps> = ({ flex, label, mask, ...props }) => {
   return (
     <Styled.DivInput flex={flex}>
       <Styled.Label htmlFor={props.id}>{label}</Styled.Label>
-      <Styled.Input {...props} />
+      {mask && <Styled.Mask mask={mask} {...props} />}
+      {!mask && <Styled.Input {...props} />}
     </Styled.DivInput>
   );
 };
