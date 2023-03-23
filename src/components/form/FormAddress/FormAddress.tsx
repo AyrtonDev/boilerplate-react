@@ -52,6 +52,7 @@ const FormAddress = () => {
     <Styled.Form>
       <Styled.Wrapped>
         <TextField
+          mask="99999-999"
           label="CEP:"
           id="zipcode"
           value={form.zipcode}
@@ -85,7 +86,7 @@ const FormAddress = () => {
           id="number"
           disabled={disabled}
           onChange={e => handleForm(e)}
-          flex={2}
+          flex="2"
           value={form.number}
         />
         <Styled.Divisor />
@@ -94,7 +95,7 @@ const FormAddress = () => {
           id="district"
           disabled={disabled}
           onChange={e => handleForm(e)}
-          flex={3}
+          flex="2"
           value={form.district}
         />
       </Styled.Wrapped>
@@ -104,7 +105,7 @@ const FormAddress = () => {
           id="city"
           disabled={disabled}
           onChange={e => handleForm(e)}
-          flex={1}
+          flex="1"
           value={form.city}
         />
         <Styled.Divisor />
@@ -113,7 +114,7 @@ const FormAddress = () => {
           id="state"
           disabled={disabled}
           onChange={e => handleForm(e)}
-          flex={1}
+          flex="1"
           value={form.state}
         />
       </Styled.Wrapped>
