@@ -1,6 +1,14 @@
 import styled from 'styled-components';
+import InputMask from 'react-input-mask';
 
-export const Input = styled.input`
+export const Mask = styled(InputMask)`
+  width: inherit;
+  height: 42px;
+  border: 1px solid ${({ theme }) => theme.colors.gray[200]};
+  padding: 20px 10px;
+`;
+
+export const Input = styled.div`
   width: inherit;
   height: 42px;
   border: 1px solid ${({ theme }) => theme.colors.gray[200]};
