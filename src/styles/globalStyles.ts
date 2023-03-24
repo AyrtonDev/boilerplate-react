@@ -53,4 +53,12 @@ export default createGlobalStyle<{ theme: ThemeType }>`
     margin-bottom: 15px;
     margin-right: 15px;
   }
+  h1,
+  h2,
+  h3,
+  h4,
+  p,
+  span {
+    font-family:${({ theme }) => theme.fontFamily.base} ;
+  }
 `;
