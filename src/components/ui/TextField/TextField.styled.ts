@@ -8,7 +8,7 @@ export const Mask = styled(InputMask)`
   padding: 20px 10px;
 `;
 
-export const Input = styled.div`
+export const Input = styled.input`
   width: inherit;
   height: 42px;
   border: 1px solid ${({ theme }) => theme.colors.gray[200]};
