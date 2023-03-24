@@ -48,16 +48,21 @@ const FormAddress = () => {
     }
   }
 
+  function handleSubmit(e: any) {
+    e.preventDefault();
+
+    const msg = `cep: ${form.zipcode} \nlogradouro: ${form.street} \ndistrict: ${form.district} \ncidade: ${form.city} \nestado: ${form.state}`;
+    alert(msg);
+  }
+
   return (
-    <Styled.Form>
+    <Styled.Form onSubmit={handleSubmit}>
       <Styled.Wrapped>
         <TextField
           mask="99999-999"
           label="CEP:"
           id="zipcode"
           value={form.zipcode}
-          minLength={8}
-          maxLength={10}
           onChange={e => handleForm(e)}
         />
       </Styled.Wrapped>
@@ -74,9 +79,9 @@ const FormAddress = () => {
         <TextField
           label="Complemento:"
           disabled={disabled}
+          value={form.complement}
           onChange={e => handleForm(e)}
           id="complement"
-          value={form.complement}
         />
       </Styled.Wrapped>
       <Styled.Wrapped>
@@ -93,33 +98,33 @@ const FormAddress = () => {
         <TextField
           label="Bairro:"
           id="district"
+          value={form.district}
           disabled={disabled}
           onChange={e => handleForm(e)}
           flex="2"
-          value={form.district}
         />
       </Styled.Wrapped>
       <Styled.Wrapped>
         <TextField
           label="Cidade:"
           id="city"
+          value={form.city}
           disabled={disabled}
           onChange={e => handleForm(e)}
           flex="1"
-          value={form.city}
         />
         <Styled.Divisor />
         <TextField
           label="Estado:"
           id="state"
+          value={form.state}
           disabled={disabled}
           onChange={e => handleForm(e)}
           flex="1"
-          value={form.state}
         />
       </Styled.Wrapped>
       <Styled.WrappedInvert>
-        <Button>Salvar</Button>
+        <Button onClick={handleSubmit}>Salvar</Button>
       </Styled.WrappedInvert>
     </Styled.Form>
   );
