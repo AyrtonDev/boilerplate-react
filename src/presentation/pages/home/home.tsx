@@ -1,6 +1,7 @@
-import { useState } from "react";
-import { Button } from "@/presentation/components/ui/button";
 import { Minus, Plus } from "lucide-react";
+import { useState } from "react";
+
+import { Button } from "@/presentation/components/ui/button";
 
 export function Home() {
   const [count, setCount] = useState(0);
