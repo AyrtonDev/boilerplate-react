@@ -20,13 +20,19 @@ export function Home() {
       <section className="p-20 bg-gray-100 rounded flex flex-col items-center gap-10">
         <h1 className="text-4xl font-bold">Boilerplate Vite React TS</h1>
 
-        <div className="flex items-center gap-5">
-          <Button name="plus" onClick={handleButton} className="cursor-pointer">
+        <div className="flex items-center justify-between gap-3">
+          <Button
+            name="plus"
+            size="icon"
+            onClick={handleButton}
+            className="cursor-pointer"
+          >
             <Plus />
           </Button>
-          <span>{count}</span>
+          <span className="text-xl font-bold w-10 text-center">{count}</span>
           <Button
             name="minus"
+            size="icon"
             onClick={handleButton}
             className="cursor-pointer"
           >
