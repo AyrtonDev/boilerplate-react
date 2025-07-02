@@ -8,7 +8,7 @@ export function Home() {
   const handleButton = (e: React.MouseEvent<HTMLButtonElement>) => {
     const { name } = e.target as HTMLButtonElement;
 
-    if (name === "plus") setCount((prev) => prev++);
+    if (name === "plus") setCount((prev) => prev + 1);
 
     if (name === "minus" && count > 0) setCount((prev) => prev - 1);
 
@@ -16,16 +16,20 @@ export function Home() {
   };
 
   return (
-    <main>
-      <section>
-        <h1>Boilerplate Vite React TS</h1>
+    <main className="w-screen h-screen bg-gray-900 flex justify-center items-center">
+      <section className="p-20 bg-gray-100 rounded flex flex-col items-center gap-10">
+        <h1 className="text-4xl font-bold">Boilerplate Vite React TS</h1>
 
-        <div>
-          <Button name="plus" onClick={handleButton}>
+        <div className="flex items-center gap-5">
+          <Button name="plus" onClick={handleButton} className="cursor-pointer">
             <Plus />
           </Button>
           <span>{count}</span>
-          <Button name="minus" onClick={handleButton}>
+          <Button
+            name="minus"
+            onClick={handleButton}
+            className="cursor-pointer"
+          >
             <Minus />
           </Button>
         </div>
